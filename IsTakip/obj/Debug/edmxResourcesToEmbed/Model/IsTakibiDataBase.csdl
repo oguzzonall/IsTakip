@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IsTakibiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CariKart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kod" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tanim" Type="String" MaxLength="65" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GrupTanimi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sirket_Kod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GrupSirketi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili1Unvan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili2Unvan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili3Unvan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yetkili4Unvan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SevkAdres" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Adres1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Adres2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Adres3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FatAdres1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FatAdres2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FatAdres3" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="il" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ilce" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ulke" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BolgeKod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tel1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Tel2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Faks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gsm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VergiDairesi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VergiNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VadeGun" Type="Int16" Nullable="false" />
+    <Property Name="KalitePuani" Type="Int16" Nullable="false" />
+    <Property Name="PerformansPuan" Type="Double" Nullable="false" />
+    <Property Name="A_UKP" Type="Double" Nullable="false" />
+    <Property Name="A1_MlzKalitePuani" Type="Double" Nullable="false" />
+    <Property Name="A2_DuzFaaliyetPuani" Type="Double" Nullable="false" />
+    <Property Name="B_TP" Type="Double" Nullable="false" />
+    <Property Name="B1_TerminMiktarUyumu" Type="Double" Nullable="false" />
+    <Property Name="B2_TerminZamanUyumu" Type="Double" Nullable="false" />
+    <Property Name="B3_AmbalajUyumu" Type="Double" Nullable="false" />
+    <Property Name="C_FG" Type="Double" Nullable="false" />
+    <Property Name="D_KS" Type="Double" Nullable="false" />
+    <Property Name="KaliteSistemiVar" Type="Boolean" Nullable="false" />
+    <Property Name="KalilteSistemPuani" Type="Double" Nullable="false" />
+    <Property Name="TedSuresiPuani" Type="Double" Nullable="false" />
+    <Property Name="BrFiyatPuani" Type="Double" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OzelKod1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OzelKod2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OzelKod3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OzelKod4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OzelKod5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OzelKod6" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OzelKod7" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Aktif" Type="Boolean" Nullable="false" />
+    <Property Name="IstigalKonusu" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AliciSatici" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Onayli" Type="Boolean" Nullable="false" />
+    <Property Name="Isk1" Type="Double" Nullable="false" />
+    <Property Name="Isk2" Type="Double" Nullable="false" />
+    <Property Name="Isk3" Type="Double" Nullable="false" />
+    <Property Name="FiyatKodu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nakliye" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Odeme" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Teslim" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VarisYeri" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OdemeTarihi" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TahsilatBilgisi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Kdv" Type="Double" Nullable="false" />
+    <Property Name="KaraListe" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KaraListeAciklama" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TedDegHesapNo" Type="Int32" Nullable="false" />
+    <Property Name="TedSifre" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IletisimPuani" Type="Double" Nullable="false" />
+    <Property Name="KayitTarihi" Type="DateTime" Precision="0" />
+    <Property Name="KullaniciNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DegTarihi" Type="DateTime" Precision="0" />
+    <Property Name="DegKullNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yurticidisi" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MRP_Peryodu" Type="Int16" Nullable="false" />
+    <Property Name="SaticiKod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SevkMinLimit" Type="Double" Nullable="false" />
+    <Property Name="SevkEmriEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IrsaliyeEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FaturaEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SatisIadeEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="YetkiliKullaniciNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SatisOdemeUyariGunu" Type="Byte" Nullable="false" />
+    <Property Name="Sevkil" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sevkilce" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SevkUlke" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FiyatKoduIleAlacakTakibi" Type="Boolean" Nullable="false" />
+    <Property Name="NeredenBuldu" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="WebUyeId" Type="Int32" Nullable="false" />
+    <Property Name="Sektor" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SektorAgirligi" Type="Byte" Nullable="false" />
+    <Property Name="SektordeYaptigiIs" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PotansiyelCariKartId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipDetay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MasterId" Type="Int32" Nullable="false" />
+    <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Aciklama" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Durumu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sorumlu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Yonlendiren" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KayitTarihi" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MailDurumu" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IadeAciklama" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HarcananSure" Type="Double" Nullable="false" />
+    <Property Name="IsiVerenYorumu" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipGruplar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipIzleme">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Izleyen" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Izlenen" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipKategori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tanim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TerminGunuBelirle" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipMailler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="IsTakipMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IsiVeren" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Oncelik" Type="Int32" Nullable="false" />
+    <Property Name="Kategori" Type="Int32" Nullable="false" />
+    <Property Name="Kapandi" Type="Boolean" Nullable="false" />
+    <Property Name="Termin" Type="DateTime" Precision="0" />
+    <Property Name="KayitTarihi" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TamamlanmaYuzdesi" Type="Int32" Nullable="false" />
+    <Property Name="Gun" Type="Int32" Nullable="false" />
+    <Property Name="MailDurumu" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsKodu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsGrubu" Type="Int32" Nullable="false" />
+    <Property Name="EkliBelge" Type="Byte" Nullable="false" />
+    <Property Name="Arizaid" Type="Int32" Nullable="false" />
+    <Property Name="Okundu" Type="Boolean" Nullable="false" />
+    <Property Name="Gorusmeid" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotMasterId" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotDetayId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipOncelikler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tanim" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gun" Type="Int32" Nullable="false" />
+    <Property Name="AmirMailGitmeSuresi1" Type="Int32" Nullable="false" />
+    <Property Name="AmirMailGitmeSuresi2" Type="Int32" Nullable="false" />
+    <Property Name="AmirMailGitmeSuresi3" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipPeriyodikMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IsiVeren" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Oncelik" Type="Int32" Nullable="false" />
+    <Property Name="Kategori" Type="Int32" Nullable="false" />
+    <Property Name="KayitTarihi" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Gun" Type="Int32" Nullable="false" />
+    <Property Name="IsKodu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsGrubu" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotId1" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotId2" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotId3" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotId4" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotId5" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipPeriyodikSorumlular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MasterId" Type="Int32" Nullable="false" />
+    <Property Name="Sorumlu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Durumu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mail" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipSorumlular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MasterId" Type="Int32" Nullable="false" />
+    <Property Name="Sorumlu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Durumu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mail" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipWebTalep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WebKullNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WebKullSifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sirket_Kod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TanimPersonel">
+    <Key>
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Sirket_Kod" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SicilNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sirket_Kod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Isim" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsimEDefter" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Gorevi" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CalistigiBolum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsMerkeziKodu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IslemYeriKodu" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SadeceBolumuneUretimGirisi" Type="Boolean" Nullable="false" />
+    <Property Name="Aktif" Type="Boolean" Nullable="false" />
+    <Property Name="Sifre" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MusSipMesajAlacak" Type="Boolean" Nullable="false" />
+    <Property Name="MusSipMesajDurum1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MusSipMesajDurum2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SevkEmriMesajAlacak" Type="Boolean" Nullable="false" />
+    <Property Name="SevkEmriMesajDurum1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SevkEmriMesajDurum2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FiyatDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="FiyatGoremesin" Type="Boolean" Nullable="false" />
+    <Property Name="FaturaHareketKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FaturaCariKod" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KasaFisTipi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KasaKasaKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KasaHesTipi" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KasaHesKodu" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FaturaDepoKod" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SatinalmaLimitiTL" Type="Double" Nullable="false" />
+    <Property Name="TalepOnayYapabilir" Type="Boolean" Nullable="false" />
+    <Property Name="WebKullanicisi" Type="Boolean" Nullable="false" />
+    <Property Name="WebdenSiparisGirebilsin" Type="Boolean" Nullable="false" />
+    <Property Name="WebdenSiparisSilebilsin" Type="Boolean" Nullable="false" />
+    <Property Name="EPosta" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TZYAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="MUHAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="ITSAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="IKBAdmin1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IKBAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="ITSSablonOlstrbilir" Type="Boolean" Nullable="false" />
+    <Property Name="TartiAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="BankaTalimatAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="RehberAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="StokAdiniDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="StokMRP_BilgDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="StokKaliteDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="StokTedarikDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="StokMlzGrupDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="MusteriSiparisRezerviniDegistirebilsin" Type="Boolean" Nullable="false" />
+    <Property Name="TumFirmalariGorebilsin" Type="Boolean" Nullable="false" />
+    <Property Name="CariBakiyeGorebilsin" Type="Boolean" Nullable="false" />
+    <Property Name="DefaultSirket" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StoktanRezervdeMusSipDegistirsin" Type="Boolean" Nullable="false" />
+    <Property Name="KullanilanModulIceriginiDegistirebilir" Type="Boolean" Nullable="false" />
+    <Property Name="UretimPlanlamaYetkisiVar" Type="Boolean" Nullable="false" />
+    <Property Name="MusteriSiparisiOnaylayabilir" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KisaKodu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AmirSicilNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OtomatikSifreIleGiris" Type="Boolean" Nullable="false" />
+    <Property Name="WebdendeGirebilir" Type="Boolean" Nullable="false" />
+    <Property Name="WebdenEkstreAlabilsin" Type="Boolean" Nullable="false" />
+    <Property Name="DokumanBilgDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="SatisVeTeklifteFiyatDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="BarkodDizayniYapamasin" Type="Boolean" Nullable="false" />
+    <Property Name="ArizaAdmin" Type="Boolean" Nullable="false" />
+    <Property Name="TumDepolaraYetkili" Type="Boolean" Nullable="false" />
+    <Property Name="SevkEmirliSevkiyattaBarkodsuzSevkEdebilir" Type="Boolean" Nullable="false" />
+    <Property Name="SatinalmaTalepteStokIsminiDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="SatinalmaSipManuelKapatabilsin" Type="Boolean" Nullable="false" />
+    <Property Name="FaturadaSatinalmaFarkOnayi" Type="Boolean" Nullable="false" />
+    <Property Name="WebSatisHMM" Type="Boolean" Nullable="false" />
+    <Property Name="WebSatisYMM" Type="Boolean" Nullable="false" />
+    <Property Name="WebSatisMMM" Type="Boolean" Nullable="false" />
+    <Property Name="WebStokOzelKod4" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MusteriSipOnaylayabilir" Type="Boolean" Nullable="false" />
+    <Property Name="StnlmSipKapatmaYuzdesi" Type="Double" Nullable="false" />
+    <Property Name="SiparisMailAdresi" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SiparisMailSifresi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="KaliteSonucDegistirebilir" Type="Boolean" Nullable="false" />
+    <Property Name="TumFaturalaraYetkili" Type="Boolean" Nullable="false" />
+    <Property Name="GorusmeTakibindeTumBolumleriGorsun" Type="Boolean" Nullable="false" />
+    <Property Name="GorusmeTakipBilgisiSilebilsin" Type="Boolean" Nullable="false" />
+    <Property Name="KoliIciMiktarDisindaSiparisGirebilir" Type="Boolean" Nullable="false" />
+    <Property Name="ElTerminalindeStokKontrolYapamasin" Type="Boolean" Nullable="false" />
+    <Property Name="AdreslerdeEksiBakiyeKaydedebilir" Type="Boolean" Nullable="false" />
+    <Property Name="TeklifSiparisDegistir" Type="Boolean" Nullable="false" />
+    <Property Name="WebdeEkstre" Type="Boolean" Nullable="false" />
+    <Property Name="TeklifVeSiparisKarlilikOraniniGorebilsin" Type="Boolean" Nullable="false" />
+    <Property Name="BolgeKod" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OturumSuresi" Type="Int32" Nullable="false" />
+    <Property Name="TeklifVeSiparisIskontoVeKdvDegistiremesin" Type="Boolean" Nullable="false" />
+    <Property Name="TeklifVeSiparisIskontoVeKdvGoremesin" Type="Boolean" Nullable="false" />
+    <Property Name="SatisVeTeklifteFiyatGoremesin" Type="Boolean" Nullable="false" />
+    <Property Name="SatisDepoKod" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TumKisilerinIsleriniGorebilsin" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipJobProcess">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="IsTakipPeriyodikDetay">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Periyot" />
+      <PropertyRef Name="PeriyotTipi" />
+      <PropertyRef Name="PeriyotGunu" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Periyot" Type="Int32" Nullable="false" />
+    <Property Name="PeriyotTipi" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PeriyotGunu" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipSabitler">
+    <Key>
+      <PropertyRef Name="Host" />
+      <PropertyRef Name="Port" />
+      <PropertyRef Name="Sifre" />
+      <PropertyRef Name="mail" />
+      <PropertyRef Name="EnableSsl" />
+      <PropertyRef Name="AndroidVersiyonKodu" />
+      <PropertyRef Name="AndroidVersiyonAdi" />
+    </Key>
+    <Property Name="Host" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Port" Type="Int32" Nullable="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnableSsl" Type="Boolean" Nullable="false" />
+    <Property Name="AndroidVersiyonKodu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AndroidVersiyonAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="IsTakibiDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CariKarts" EntityType="Self.CariKart" />
+    <EntitySet Name="IsTakipDetays" EntityType="Self.IsTakipDetay" />
+    <EntitySet Name="IsTakipGruplars" EntityType="Self.IsTakipGruplar" />
+    <EntitySet Name="IsTakipIzlemes" EntityType="Self.IsTakipIzleme" />
+    <EntitySet Name="IsTakipKategoris" EntityType="Self.IsTakipKategori" />
+    <EntitySet Name="IsTakipMaillers" EntityType="Self.IsTakipMailler" />
+    <EntitySet Name="IsTakipMasters" EntityType="Self.IsTakipMaster" />
+    <EntitySet Name="IsTakipOnceliklers" EntityType="Self.IsTakipOncelikler" />
+    <EntitySet Name="IsTakipPeriyodikMasters" EntityType="Self.IsTakipPeriyodikMaster" />
+    <EntitySet Name="IsTakipPeriyodikSorumlulars" EntityType="Self.IsTakipPeriyodikSorumlular" />
+    <EntitySet Name="IsTakipSorumlulars" EntityType="Self.IsTakipSorumlular" />
+    <EntitySet Name="IsTakipWebTaleps" EntityType="Self.IsTakipWebTalep" />
+    <EntitySet Name="TanimPersonels" EntityType="Self.TanimPersonel" />
+    <EntitySet Name="IsTakipJobProcesses" EntityType="Self.IsTakipJobProcess" />
+    <EntitySet Name="IsTakipPeriyodikDetays" EntityType="Self.IsTakipPeriyodikDetay" />
+    <EntitySet Name="IsTakipSabitlers" EntityType="Self.IsTakipSabitler" />
+    <FunctionImport Name="VerdigimIsler" ReturnType="Collection(IsTakibiModel.VerdigimIsler_Result)">
+      <Parameter Name="Sorumlu" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="VerdigimIsler_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="DateTime" Name="Tarih" Nullable="false" Precision="16" />
+    <Property Type="String" Name="IsiVeren" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="Aciklama" Nullable="false" MaxLength="1000" />
+    <Property Type="Int32" Name="Oncelik" Nullable="false" />
+    <Property Type="Int32" Name="Kategori" Nullable="false" />
+    <Property Type="Boolean" Name="Kapandi" Nullable="false" />
+    <Property Type="DateTime" Name="Termin" Nullable="true" Precision="16" />
+    <Property Type="DateTime" Name="KayitTarihi" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="TamamlanmaYuzdesi" Nullable="false" />
+    <Property Type="Int32" Name="Gun" Nullable="false" />
+    <Property Type="String" Name="MailDurumu" Nullable="false" MaxLength="500" />
+    <Property Type="String" Name="IsKodu" Nullable="false" MaxLength="20" />
+    <Property Type="Int32" Name="IsGrubu" Nullable="false" />
+    <Property Type="Byte" Name="EkliBelge" Nullable="false" />
+    <Property Type="Int32" Name="Arizaid" Nullable="false" />
+    <Property Type="Boolean" Name="Okundu" Nullable="false" />
+    <Property Type="Int32" Name="Gorusmeid" Nullable="false" />
+    <Property Type="Int32" Name="PeriyotMasterId" Nullable="false" />
+    <Property Type="Int32" Name="PeriyotDetayId" Nullable="false" />
+    <Property Type="Int32" Name="Id1" Nullable="false" />
+    <Property Type="String" Name="Tanim" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="Gun1" Nullable="false" />
+    <Property Type="Int32" Name="AmirMailGitmeSuresi1" Nullable="false" />
+    <Property Type="Int32" Name="AmirMailGitmeSuresi2" Nullable="false" />
+    <Property Type="Int32" Name="AmirMailGitmeSuresi3" Nullable="false" />
+    <Property Type="Int32" Name="Id2" Nullable="false" />
+    <Property Type="String" Name="Tanim1" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="TerminGunuBelirle" Nullable="false" />
+  </ComplexType>
+</Schema>

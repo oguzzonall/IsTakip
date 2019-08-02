@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "Anasayfa";
+}
+
+@using IsTakip.Models;
+@model List<IsTakipMaster>
+
+@section head{
+    <link rel="stylesheet" type="text/css" href="/Content/css/multi-select.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="/Content/css/datetimepicker.css" />
+
+
+}
+
+<div class="col-lg-12">
+    <div class="panel">
+        <div class="panel-body" style="overflow-x:auto">
+            <div class="btn-group pull-right open">
+                <a class="nav-link btn btn-success" data-toggle="modal" data-target="#IsEkleModal">
+                    İş Ekle
+                </a>
+            </div>
+            <div id="unseen">
+                <table width="100%" class="table table-bordered table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="numeric">İş Takip No</th>
+                            <th class="numeric">Tarih</th>
+                            <th>Açıklama</th>
+                            <th class="numeric">İşi Veren</th>
+                            <th class="numeric">Öncelik</th>
+                            <th class="numeric">Kategori</th>
+                            <th class="numeric">Tamamlanma Yüzdesi</th>
+                            <th class="numeric">Termin</th>
+                            <th>Yapılanı Gör</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (IsTakipMaster ITM in Model)
+                        {
+                            <tr>
+                                <td class="numeric">@ITM.id</td>
+                                <td class="numeric">@ITM.KayitTarih</td>
+                                <td>@ITM.Aciklama</td>
+                                <td class="numeric">@ITM.Kullanicilar.KullaniciAdi</td>
+                                <td class="numeric">@ITM.IsTakipOncelik.OncelikAdi</td>
+                                <td class="numeric">@ITM.IsTakipKategori.KategoriAdi</td>
+                                <td class="numeric">@ITM.TamamlanmaYuzdesi</td>
+                                <td class="numeric">@ITM.Termin</td>
+                                <td><a href="/Kullanici/VerdigimYapılanlar/@ITM.id" class="btn btn-success" style="margin-top:6px;">Yapılanı Gör</a></td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="IsEkleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLabel">İş Ekle</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/Kullanici/IsEkle" method="post">
+                    @*<div class="form-group">
+                        <label class="control-label col-md-3">Start with years viewMode</label>
+                        <div class="col-md-3 col-xs-11">
+                            <div data-date-viewmode="years" data-date-format="dd-mm-yyyy" data-date="12-02-2012" class="input-append date dpYears">
+                                <input type="text" readonly="" value="12-02-2012" size="16" class="form-control">
+                                <span class="input-group-btn add-on">
+                                    <button class="btn btn-danger" type="button"><i class="icon-calendar"></i></button>
+                                </span>
+                            </div>
+                            <span class="help-block">Select date</span>
+                        </div>
+                    </div>*@
+                    <div class="form-group">
+                        <label>İş Bitiş Tarihi</label>
+                        <input class="form-control error" type="date" name="Termin" required="" />
+                    </div>
+                    <div class="form-group">
+                        <label>Açıklama:</label>
+                        <textarea name="Aciklama" class="form-control" rows="5" required=""></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Kategoriler</label>
+                        <select class="form-control error" name="KategoriId" required="">
+                            @foreach (IsTakipKategori ktg in ViewBag.Kategoriler)
+                            {
+                                <option value="@ktg.Id">@ktg.KategoriAdi</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Öncelikler</label>
+                        <select class="form-control error" name="OncelikId" required="">
+                            @foreach (IsTakipOncelik oncelik in ViewBag.Oncelik)
+                            {
+                                <option value="@oncelik.Id">@oncelik.OncelikAdi</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>İş Grubu</label>
+                        <select class="form-control error" name="IsGrubuId" required="">
+                            @foreach (IsTakipGruplar grup in ViewBag.Gruplar)
+                            {
+                                <option value="@grup.Id">@grup.GrupAdi</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label>Sorumlular</label>
+                            <select multiple="multiple" class="multi-select" id="my_multi_select1" name="Sorumlular" required="">
+                                @foreach (Kullanicilar kln in ViewBag.Kullanicilar)
+                                {
+                                    <option value="@kln.KullaniciNo">@kln.KullaniciAdi</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" type="submit">İş Ekle</button>
+                    </div>
+                    @*<span style="color:red; font-size:16px">@ViewBag.Hata</span>*@
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section script{
+    <script type="text/javascript" src="/Content/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="/Content/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="/Content/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="/Content/js/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="/Content/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="/Content/js/advanced-form-components.js"></script>
+}

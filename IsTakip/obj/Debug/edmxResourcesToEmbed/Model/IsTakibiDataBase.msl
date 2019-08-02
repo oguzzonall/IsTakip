@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IsTakibiModelStoreContainer" CdmEntityContainer="IsTakibiDB">
+    <EntitySetMapping Name="CariKarts">
+      <EntityTypeMapping TypeName="IsTakibiModel.CariKart">
+        <MappingFragment StoreEntitySet="CariKart">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Kod" ColumnName="Kod" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="GrupTanimi" ColumnName="GrupTanimi" />
+          <ScalarProperty Name="Sirket_Kod" ColumnName="Sirket_Kod" />
+          <ScalarProperty Name="GrupSirketi" ColumnName="GrupSirketi" />
+          <ScalarProperty Name="Yetkili1" ColumnName="Yetkili1" />
+          <ScalarProperty Name="Yetkili1Unvan" ColumnName="Yetkili1Unvan" />
+          <ScalarProperty Name="Yetkili2" ColumnName="Yetkili2" />
+          <ScalarProperty Name="Yetkili2Unvan" ColumnName="Yetkili2Unvan" />
+          <ScalarProperty Name="Yetkili3" ColumnName="Yetkili3" />
+          <ScalarProperty Name="Yetkili3Unvan" ColumnName="Yetkili3Unvan" />
+          <ScalarProperty Name="Yetkili4" ColumnName="Yetkili4" />
+          <ScalarProperty Name="Yetkili4Unvan" ColumnName="Yetkili4Unvan" />
+          <ScalarProperty Name="SevkAdres" ColumnName="SevkAdres" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Adres1" ColumnName="Adres1" />
+          <ScalarProperty Name="Adres2" ColumnName="Adres2" />
+          <ScalarProperty Name="Adres3" ColumnName="Adres3" />
+          <ScalarProperty Name="FatAdres1" ColumnName="FatAdres1" />
+          <ScalarProperty Name="FatAdres2" ColumnName="FatAdres2" />
+          <ScalarProperty Name="FatAdres3" ColumnName="FatAdres3" />
+          <ScalarProperty Name="il" ColumnName="il" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+          <ScalarProperty Name="Ulke" ColumnName="Ulke" />
+          <ScalarProperty Name="BolgeKod" ColumnName="BolgeKod" />
+          <ScalarProperty Name="Tel1" ColumnName="Tel1" />
+          <ScalarProperty Name="Tel2" ColumnName="Tel2" />
+          <ScalarProperty Name="Faks" ColumnName="Faks" />
+          <ScalarProperty Name="Gsm" ColumnName="Gsm" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="VergiDairesi" ColumnName="VergiDairesi" />
+          <ScalarProperty Name="VergiNo" ColumnName="VergiNo" />
+          <ScalarProperty Name="VadeGun" ColumnName="VadeGun" />
+          <ScalarProperty Name="KalitePuani" ColumnName="KalitePuani" />
+          <ScalarProperty Name="PerformansPuan" ColumnName="PerformansPuan" />
+          <ScalarProperty Name="A_UKP" ColumnName="A_UKP" />
+          <ScalarProperty Name="A1_MlzKalitePuani" ColumnName="A1_MlzKalitePuani" />
+          <ScalarProperty Name="A2_DuzFaaliyetPuani" ColumnName="A2_DuzFaaliyetPuani" />
+          <ScalarProperty Name="B_TP" ColumnName="B_TP" />
+          <ScalarProperty Name="B1_TerminMiktarUyumu" ColumnName="B1_TerminMiktarUyumu" />
+          <ScalarProperty Name="B2_TerminZamanUyumu" ColumnName="B2_TerminZamanUyumu" />
+          <ScalarProperty Name="B3_AmbalajUyumu" ColumnName="B3_AmbalajUyumu" />
+          <ScalarProperty Name="C_FG" ColumnName="C_FG" />
+          <ScalarProperty Name="D_KS" ColumnName="D_KS" />
+          <ScalarProperty Name="KaliteSistemiVar" ColumnName="KaliteSistemiVar" />
+          <ScalarProperty Name="KalilteSistemPuani" ColumnName="KalilteSistemPuani" />
+          <ScalarProperty Name="TedSuresiPuani" ColumnName="TedSuresiPuani" />
+          <ScalarProperty Name="BrFiyatPuani" ColumnName="BrFiyatPuani" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="OzelKod1" ColumnName="OzelKod1" />
+          <ScalarProperty Name="OzelKod2" ColumnName="OzelKod2" />
+          <ScalarProperty Name="OzelKod3" ColumnName="OzelKod3" />
+          <ScalarProperty Name="OzelKod4" ColumnName="OzelKod4" />
+          <ScalarProperty Name="OzelKod5" ColumnName="OzelKod5" />
+          <ScalarProperty Name="OzelKod6" ColumnName="OzelKod6" />
+          <ScalarProperty Name="OzelKod7" ColumnName="OzelKod7" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="IstigalKonusu" ColumnName="IstigalKonusu" />
+          <ScalarProperty Name="AliciSatici" ColumnName="AliciSatici" />
+          <ScalarProperty Name="Onayli" ColumnName="Onayli" />
+          <ScalarProperty Name="Isk1" ColumnName="Isk1" />
+          <ScalarProperty Name="Isk2" ColumnName="Isk2" />
+          <ScalarProperty Name="Isk3" ColumnName="Isk3" />
+          <ScalarProperty Name="FiyatKodu" ColumnName="FiyatKodu" />
+          <ScalarProperty Name="Nakliye" ColumnName="Nakliye" />
+          <ScalarProperty Name="Odeme" ColumnName="Odeme" />
+          <ScalarProperty Name="Teslim" ColumnName="Teslim" />
+          <ScalarProperty Name="VarisYeri" ColumnName="VarisYeri" />
+          <ScalarProperty Name="OdemeTarihi" ColumnName="OdemeTarihi" />
+          <ScalarProperty Name="TahsilatBilgisi" ColumnName="TahsilatBilgisi" />
+          <ScalarProperty Name="Kdv" ColumnName="Kdv" />
+          <ScalarProperty Name="KaraListe" ColumnName="KaraListe" />
+          <ScalarProperty Name="KaraListeAciklama" ColumnName="KaraListeAciklama" />
+          <ScalarProperty Name="TedDegHesapNo" ColumnName="TedDegHesapNo" />
+          <ScalarProperty Name="TedSifre" ColumnName="TedSifre" />
+          <ScalarProperty Name="IletisimPuani" ColumnName="IletisimPuani" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="KullaniciNo" ColumnName="KullaniciNo" />
+          <ScalarProperty Name="DegTarihi" ColumnName="DegTarihi" />
+          <ScalarProperty Name="DegKullNo" ColumnName="DegKullNo" />
+          <ScalarProperty Name="Yurticidisi" ColumnName="Yurticidisi" />
+          <ScalarProperty Name="MRP_Peryodu" ColumnName="MRP_Peryodu" />
+          <ScalarProperty Name="SaticiKod" ColumnName="SaticiKod" />
+          <ScalarProperty Name="SevkMinLimit" ColumnName="SevkMinLimit" />
+          <ScalarProperty Name="SevkEmriEmail" ColumnName="SevkEmriEmail" />
+          <ScalarProperty Name="IrsaliyeEmail" ColumnName="IrsaliyeEmail" />
+          <ScalarProperty Name="FaturaEmail" ColumnName="FaturaEmail" />
+          <ScalarProperty Name="SatisIadeEmail" ColumnName="SatisIadeEmail" />
+          <ScalarProperty Name="YetkiliKullaniciNo" ColumnName="YetkiliKullaniciNo" />
+          <ScalarProperty Name="SatisOdemeUyariGunu" ColumnName="SatisOdemeUyariGunu" />
+          <ScalarProperty Name="Sevkil" ColumnName="Sevkil" />
+          <ScalarProperty Name="Sevkilce" ColumnName="Sevkilce" />
+          <ScalarProperty Name="SevkUlke" ColumnName="SevkUlke" />
+          <ScalarProperty Name="FiyatKoduIleAlacakTakibi" ColumnName="FiyatKoduIleAlacakTakibi" />
+          <ScalarProperty Name="NeredenBuldu" ColumnName="NeredenBuldu" />
+          <ScalarProperty Name="WebUyeId" ColumnName="WebUyeId" />
+          <ScalarProperty Name="Sektor" ColumnName="Sektor" />
+          <ScalarProperty Name="SektorAgirligi" ColumnName="SektorAgirligi" />
+          <ScalarProperty Name="SektordeYaptigiIs" ColumnName="SektordeYaptigiIs" />
+          <ScalarProperty Name="PotansiyelCariKartId" ColumnName="PotansiyelCariKartId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipDetays">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipDetay">
+        <MappingFragment StoreEntitySet="IsTakipDetay">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+          <ScalarProperty Name="Sorumlu" ColumnName="Sorumlu" />
+          <ScalarProperty Name="Yonlendiren" ColumnName="Yonlendiren" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="MailDurumu" ColumnName="MailDurumu" />
+          <ScalarProperty Name="IadeAciklama" ColumnName="IadeAciklama" />
+          <ScalarProperty Name="HarcananSure" ColumnName="HarcananSure" />
+          <ScalarProperty Name="IsiVerenYorumu" ColumnName="IsiVerenYorumu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipGruplars">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipGruplar">
+        <MappingFragment StoreEntitySet="IsTakipGruplar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipIzlemes">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipIzleme">
+        <MappingFragment StoreEntitySet="IsTakipIzleme">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Izleyen" ColumnName="Izleyen" />
+          <ScalarProperty Name="Izlenen" ColumnName="Izlenen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipKategoris">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipKategori">
+        <MappingFragment StoreEntitySet="IsTakipKategori">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="TerminGunuBelirle" ColumnName="TerminGunuBelirle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipMaillers">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipMailler">
+        <MappingFragment StoreEntitySet="IsTakipMailler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipMasters">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipMaster">
+        <MappingFragment StoreEntitySet="IsTakipMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="IsiVeren" ColumnName="IsiVeren" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Oncelik" ColumnName="Oncelik" />
+          <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+          <ScalarProperty Name="Kapandi" ColumnName="Kapandi" />
+          <ScalarProperty Name="Termin" ColumnName="Termin" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="TamamlanmaYuzdesi" ColumnName="TamamlanmaYuzdesi" />
+          <ScalarProperty Name="Gun" ColumnName="Gun" />
+          <ScalarProperty Name="MailDurumu" ColumnName="MailDurumu" />
+          <ScalarProperty Name="IsKodu" ColumnName="IsKodu" />
+          <ScalarProperty Name="IsGrubu" ColumnName="IsGrubu" />
+          <ScalarProperty Name="EkliBelge" ColumnName="EkliBelge" />
+          <ScalarProperty Name="Arizaid" ColumnName="Arizaid" />
+          <ScalarProperty Name="Okundu" ColumnName="Okundu" />
+          <ScalarProperty Name="Gorusmeid" ColumnName="Gorusmeid" />
+          <ScalarProperty Name="PeriyotMasterId" ColumnName="PeriyotMasterId" />
+          <ScalarProperty Name="PeriyotDetayId" ColumnName="PeriyotDetayId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipOnceliklers">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipOncelikler">
+        <MappingFragment StoreEntitySet="IsTakipOncelikler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Gun" ColumnName="Gun" />
+          <ScalarProperty Name="AmirMailGitmeSuresi1" ColumnName="AmirMailGitmeSuresi1" />
+          <ScalarProperty Name="AmirMailGitmeSuresi2" ColumnName="AmirMailGitmeSuresi2" />
+          <ScalarProperty Name="AmirMailGitmeSuresi3" ColumnName="AmirMailGitmeSuresi3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipPeriyodikMasters">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipPeriyodikMaster">
+        <MappingFragment StoreEntitySet="IsTakipPeriyodikMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsiVeren" ColumnName="IsiVeren" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Oncelik" ColumnName="Oncelik" />
+          <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="Gun" ColumnName="Gun" />
+          <ScalarProperty Name="IsKodu" ColumnName="IsKodu" />
+          <ScalarProperty Name="IsGrubu" ColumnName="IsGrubu" />
+          <ScalarProperty Name="PeriyotId1" ColumnName="PeriyotId1" />
+          <ScalarProperty Name="PeriyotId2" ColumnName="PeriyotId2" />
+          <ScalarProperty Name="PeriyotId3" ColumnName="PeriyotId3" />
+          <ScalarProperty Name="PeriyotId4" ColumnName="PeriyotId4" />
+          <ScalarProperty Name="PeriyotId5" ColumnName="PeriyotId5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipPeriyodikSorumlulars">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipPeriyodikSorumlular">
+        <MappingFragment StoreEntitySet="IsTakipPeriyodikSorumlular">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+          <ScalarProperty Name="Sorumlu" ColumnName="Sorumlu" />
+          <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipSorumlulars">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipSorumlular">
+        <MappingFragment StoreEntitySet="IsTakipSorumlular">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MasterId" ColumnName="MasterId" />
+          <ScalarProperty Name="Sorumlu" ColumnName="Sorumlu" />
+          <ScalarProperty Name="Durumu" ColumnName="Durumu" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipWebTaleps">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipWebTalep">
+        <MappingFragment StoreEntitySet="IsTakipWebTalep">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="WebKullNo" ColumnName="WebKullNo" />
+          <ScalarProperty Name="WebKullSifre" ColumnName="WebKullSifre" />
+          <ScalarProperty Name="Sirket_Kod" ColumnName="Sirket_Kod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TanimPersonels">
+      <EntityTypeMapping TypeName="IsTakibiModel.TanimPersonel">
+        <MappingFragment StoreEntitySet="TanimPersonel">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="SicilNo" ColumnName="SicilNo" />
+          <ScalarProperty Name="Sirket_Kod" ColumnName="Sirket_Kod" />
+          <ScalarProperty Name="Isim" ColumnName="Isim" />
+          <ScalarProperty Name="IsimEDefter" ColumnName="IsimEDefter" />
+          <ScalarProperty Name="Gorevi" ColumnName="Gorevi" />
+          <ScalarProperty Name="CalistigiBolum" ColumnName="CalistigiBolum" />
+          <ScalarProperty Name="IsMerkeziKodu" ColumnName="IsMerkeziKodu" />
+          <ScalarProperty Name="IslemYeriKodu" ColumnName="IslemYeriKodu" />
+          <ScalarProperty Name="SadeceBolumuneUretimGirisi" ColumnName="SadeceBolumuneUretimGirisi" />
+          <ScalarProperty Name="Aktif" ColumnName="Aktif" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="MusSipMesajAlacak" ColumnName="MusSipMesajAlacak" />
+          <ScalarProperty Name="MusSipMesajDurum1" ColumnName="MusSipMesajDurum1" />
+          <ScalarProperty Name="MusSipMesajDurum2" ColumnName="MusSipMesajDurum2" />
+          <ScalarProperty Name="SevkEmriMesajAlacak" ColumnName="SevkEmriMesajAlacak" />
+          <ScalarProperty Name="SevkEmriMesajDurum1" ColumnName="SevkEmriMesajDurum1" />
+          <ScalarProperty Name="SevkEmriMesajDurum2" ColumnName="SevkEmriMesajDurum2" />
+          <ScalarProperty Name="FiyatDegistiremesin" ColumnName="FiyatDegistiremesin" />
+          <ScalarProperty Name="FiyatGoremesin" ColumnName="FiyatGoremesin" />
+          <ScalarProperty Name="FaturaHareketKodu" ColumnName="FaturaHareketKodu" />
+          <ScalarProperty Name="FaturaCariKod" ColumnName="FaturaCariKod" />
+          <ScalarProperty Name="KasaFisTipi" ColumnName="KasaFisTipi" />
+          <ScalarProperty Name="KasaKasaKodu" ColumnName="KasaKasaKodu" />
+          <ScalarProperty Name="KasaHesTipi" ColumnName="KasaHesTipi" />
+          <ScalarProperty Name="KasaHesKodu" ColumnName="KasaHesKodu" />
+          <ScalarProperty Name="FaturaDepoKod" ColumnName="FaturaDepoKod" />
+          <ScalarProperty Name="SatinalmaLimitiTL" ColumnName="SatinalmaLimitiTL" />
+          <ScalarProperty Name="TalepOnayYapabilir" ColumnName="TalepOnayYapabilir" />
+          <ScalarProperty Name="WebKullanicisi" ColumnName="WebKullanicisi" />
+          <ScalarProperty Name="WebdenSiparisGirebilsin" ColumnName="WebdenSiparisGirebilsin" />
+          <ScalarProperty Name="WebdenSiparisSilebilsin" ColumnName="WebdenSiparisSilebilsin" />
+          <ScalarProperty Name="EPosta" ColumnName="EPosta" />
+          <ScalarProperty Name="TZYAdmin" ColumnName="TZYAdmin" />
+          <ScalarProperty Name="MUHAdmin" ColumnName="MUHAdmin" />
+          <ScalarProperty Name="ITSAdmin" ColumnName="ITSAdmin" />
+          <ScalarProperty Name="IKBAdmin1" ColumnName="IKBAdmin1" />
+          <ScalarProperty Name="IKBAdmin" ColumnName="IKBAdmin" />
+          <ScalarProperty Name="ITSSablonOlstrbilir" ColumnName="ITSSablonOlstrbilir" />
+          <ScalarProperty Name="TartiAdmin" ColumnName="TartiAdmin" />
+          <ScalarProperty Name="BankaTalimatAdmin" ColumnName="BankaTalimatAdmin" />
+          <ScalarProperty Name="RehberAdmin" ColumnName="RehberAdmin" />
+          <ScalarProperty Name="StokAdiniDegistiremesin" ColumnName="StokAdiniDegistiremesin" />
+          <ScalarProperty Name="StokMRP_BilgDegistiremesin" ColumnName="StokMRP_BilgDegistiremesin" />
+          <ScalarProperty Name="StokKaliteDegistiremesin" ColumnName="StokKaliteDegistiremesin" />
+          <ScalarProperty Name="StokTedarikDegistiremesin" ColumnName="StokTedarikDegistiremesin" />
+          <ScalarProperty Name="StokMlzGrupDegistiremesin" ColumnName="StokMlzGrupDegistiremesin" />
+          <ScalarProperty Name="MusteriSiparisRezerviniDegistirebilsin" ColumnName="MusteriSiparisRezerviniDegistirebilsin" />
+          <ScalarProperty Name="TumFirmalariGorebilsin" ColumnName="TumFirmalariGorebilsin" />
+          <ScalarProperty Name="CariBakiyeGorebilsin" ColumnName="CariBakiyeGorebilsin" />
+          <ScalarProperty Name="DefaultSirket" ColumnName="DefaultSirket" />
+          <ScalarProperty Name="StoktanRezervdeMusSipDegistirsin" ColumnName="StoktanRezervdeMusSipDegistirsin" />
+          <ScalarProperty Name="KullanilanModulIceriginiDegistirebilir" ColumnName="KullanilanModulIceriginiDegistirebilir" />
+          <ScalarProperty Name="UretimPlanlamaYetkisiVar" ColumnName="UretimPlanlamaYetkisiVar" />
+          <ScalarProperty Name="MusteriSiparisiOnaylayabilir" ColumnName="MusteriSiparisiOnaylayabilir" />
+          <ScalarProperty Name="KisaKodu" ColumnName="KisaKodu" />
+          <ScalarProperty Name="AmirSicilNo" ColumnName="AmirSicilNo" />
+          <ScalarProperty Name="OtomatikSifreIleGiris" ColumnName="OtomatikSifreIleGiris" />
+          <ScalarProperty Name="WebdendeGirebilir" ColumnName="WebdendeGirebilir" />
+          <ScalarProperty Name="WebdenEkstreAlabilsin" ColumnName="WebdenEkstreAlabilsin" />
+          <ScalarProperty Name="DokumanBilgDegistiremesin" ColumnName="DokumanBilgDegistiremesin" />
+          <ScalarProperty Name="SatisVeTeklifteFiyatDegistiremesin" ColumnName="SatisVeTeklifteFiyatDegistiremesin" />
+          <ScalarProperty Name="BarkodDizayniYapamasin" ColumnName="BarkodDizayniYapamasin" />
+          <ScalarProperty Name="ArizaAdmin" ColumnName="ArizaAdmin" />
+          <ScalarProperty Name="TumDepolaraYetkili" ColumnName="TumDepolaraYetkili" />
+          <ScalarProperty Name="SevkEmirliSevkiyattaBarkodsuzSevkEdebilir" ColumnName="SevkEmirliSevkiyattaBarkodsuzSevkEdebilir" />
+          <ScalarProperty Name="SatinalmaTalepteStokIsminiDegistiremesin" ColumnName="SatinalmaTalepteStokIsminiDegistiremesin" />
+          <ScalarProperty Name="SatinalmaSipManuelKapatabilsin" ColumnName="SatinalmaSipManuelKapatabilsin" />
+          <ScalarProperty Name="FaturadaSatinalmaFarkOnayi" ColumnName="FaturadaSatinalmaFarkOnayi" />
+          <ScalarProperty Name="WebSatisHMM" ColumnName="WebSatisHMM" />
+          <ScalarProperty Name="WebSatisYMM" ColumnName="WebSatisYMM" />
+          <ScalarProperty Name="WebSatisMMM" ColumnName="WebSatisMMM" />
+          <ScalarProperty Name="WebStokOzelKod4" ColumnName="WebStokOzelKod4" />
+          <ScalarProperty Name="MusteriSipOnaylayabilir" ColumnName="MusteriSipOnaylayabilir" />
+          <ScalarProperty Name="StnlmSipKapatmaYuzdesi" ColumnName="StnlmSipKapatmaYuzdesi" />
+          <ScalarProperty Name="SiparisMailAdresi" ColumnName="SiparisMailAdresi" />
+          <ScalarProperty Name="SiparisMailSifresi" ColumnName="SiparisMailSifresi" />
+          <ScalarProperty Name="KaliteSonucDegistirebilir" ColumnName="KaliteSonucDegistirebilir" />
+          <ScalarProperty Name="TumFaturalaraYetkili" ColumnName="TumFaturalaraYetkili" />
+          <ScalarProperty Name="GorusmeTakibindeTumBolumleriGorsun" ColumnName="GorusmeTakibindeTumBolumleriGorsun" />
+          <ScalarProperty Name="GorusmeTakipBilgisiSilebilsin" ColumnName="GorusmeTakipBilgisiSilebilsin" />
+          <ScalarProperty Name="KoliIciMiktarDisindaSiparisGirebilir" ColumnName="KoliIciMiktarDisindaSiparisGirebilir" />
+          <ScalarProperty Name="ElTerminalindeStokKontrolYapamasin" ColumnName="ElTerminalindeStokKontrolYapamasin" />
+          <ScalarProperty Name="AdreslerdeEksiBakiyeKaydedebilir" ColumnName="AdreslerdeEksiBakiyeKaydedebilir" />
+          <ScalarProperty Name="TeklifSiparisDegistir" ColumnName="TeklifSiparisDegistir" />
+          <ScalarProperty Name="WebdeEkstre" ColumnName="WebdeEkstre" />
+          <ScalarProperty Name="TeklifVeSiparisKarlilikOraniniGorebilsin" ColumnName="TeklifVeSiparisKarlilikOraniniGorebilsin" />
+          <ScalarProperty Name="BolgeKod" ColumnName="BolgeKod" />
+          <ScalarProperty Name="OturumSuresi" ColumnName="OturumSuresi" />
+          <ScalarProperty Name="TeklifVeSiparisIskontoVeKdvDegistiremesin" ColumnName="TeklifVeSiparisIskontoVeKdvDegistiremesin" />
+          <ScalarProperty Name="TeklifVeSiparisIskontoVeKdvGoremesin" ColumnName="TeklifVeSiparisIskontoVeKdvGoremesin" />
+          <ScalarProperty Name="SatisVeTeklifteFiyatGoremesin" ColumnName="SatisVeTeklifteFiyatGoremesin" />
+          <ScalarProperty Name="SatisDepoKod" ColumnName="SatisDepoKod" />
+          <ScalarProperty Name="TumKisilerinIsleriniGorebilsin" ColumnName="TumKisilerinIsleriniGorebilsin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipJobProcesses">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipJobProcess">
+        <MappingFragment StoreEntitySet="IsTakipJobProcess">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipPeriyodikDetays">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipPeriyodikDetay">
+        <MappingFragment StoreEntitySet="IsTakipPeriyodikDetay">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Periyot" ColumnName="Periyot" />
+          <ScalarProperty Name="PeriyotTipi" ColumnName="PeriyotTipi" />
+          <ScalarProperty Name="PeriyotGunu" ColumnName="PeriyotGunu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsTakipSabitlers">
+      <EntityTypeMapping TypeName="IsTakibiModel.IsTakipSabitler">
+        <MappingFragment StoreEntitySet="IsTakipSabitler">
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="EnableSsl" ColumnName="EnableSsl" />
+          <ScalarProperty Name="AndroidVersiyonKodu" ColumnName="AndroidVersiyonKodu" />
+          <ScalarProperty Name="AndroidVersiyonAdi" ColumnName="AndroidVersiyonAdi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="VerdigimIsler" FunctionName="IsTakibiModel.Store.VerdigimIsler">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="IsTakibiModel.VerdigimIsler_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="IsiVeren" ColumnName="IsiVeren" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Oncelik" ColumnName="Oncelik" />
+          <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+          <ScalarProperty Name="Kapandi" ColumnName="Kapandi" />
+          <ScalarProperty Name="Termin" ColumnName="Termin" />
+          <ScalarProperty Name="KayitTarihi" ColumnName="KayitTarihi" />
+          <ScalarProperty Name="TamamlanmaYuzdesi" ColumnName="TamamlanmaYuzdesi" />
+          <ScalarProperty Name="Gun" ColumnName="Gun" />
+          <ScalarProperty Name="MailDurumu" ColumnName="MailDurumu" />
+          <ScalarProperty Name="IsKodu" ColumnName="IsKodu" />
+          <ScalarProperty Name="IsGrubu" ColumnName="IsGrubu" />
+          <ScalarProperty Name="EkliBelge" ColumnName="EkliBelge" />
+          <ScalarProperty Name="Arizaid" ColumnName="Arizaid" />
+          <ScalarProperty Name="Okundu" ColumnName="Okundu" />
+          <ScalarProperty Name="Gorusmeid" ColumnName="Gorusmeid" />
+          <ScalarProperty Name="PeriyotMasterId" ColumnName="PeriyotMasterId" />
+          <ScalarProperty Name="PeriyotDetayId" ColumnName="PeriyotDetayId" />
+          <ScalarProperty Name="Id1" ColumnName="Id1" />
+          <ScalarProperty Name="Tanim" ColumnName="Tanim" />
+          <ScalarProperty Name="Gun1" ColumnName="Gun1" />
+          <ScalarProperty Name="AmirMailGitmeSuresi1" ColumnName="AmirMailGitmeSuresi1" />
+          <ScalarProperty Name="AmirMailGitmeSuresi2" ColumnName="AmirMailGitmeSuresi2" />
+          <ScalarProperty Name="AmirMailGitmeSuresi3" ColumnName="AmirMailGitmeSuresi3" />
+          <ScalarProperty Name="Id2" ColumnName="Id2" />
+          <ScalarProperty Name="Tanim1" ColumnName="Tanim1" />
+          <ScalarProperty Name="TerminGunuBelirle" ColumnName="TerminGunuBelirle" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

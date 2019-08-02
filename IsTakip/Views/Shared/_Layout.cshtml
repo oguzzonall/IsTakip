@@ -1,0 +1,193 @@
+﻿
+@{
+    if (Session["KullaniciNo"] == null)
+    {
+        Response.Redirect("~/Kullanici/KullaniciGiris");
+    }
+    if (Session["Rol"] == null)
+    {
+        Response.Redirect("~/Kullanici/KullaniciGiris");
+    }
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Gretong a Ecommerce Admin Panel Category Flat Bootstrap Responsive Web Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="/Content/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="/Content/css/bootstrap-reset.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/Content/css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="/Content/css/font-awesome.css" rel="stylesheet">
+    <link href="/Content/css/table-responsive.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="/Content/css/style.css" rel="stylesheet">
+    <link href="/Content/css/style-responsive.css" rel="stylesheet" />
+    <!-- jQuery -->
+    @*<link href='/Content/fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css' />
+        <link href='/Content/fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>*@
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="/Content/css/icon-font.min.css" type='text/css' />
+    <script src="/Content/js/amcharts.js"></script>
+    <script src="/Content/js/serial.js"></script>
+    <script src="/Content/js/light.js"></script>
+    <!-- //lined-icons -->
+    <script src="/Content/js/jquery-1.10.2.min.js"></script>
+    <!--pie-chart--->
+    <script src="/Content/js/pie-chart.js" type="text/javascript"></script>
+    @RenderSection("head", false)
+</head>
+<body>
+    <div class="page-container">
+        <!--/content-inner-->
+        <div class="left-content">
+            <div class="inner-content">
+                <!-- header-starts -->
+                <div class="header-section">
+                    <!-- top_bg -->
+                    <div class="top_bg">
+
+                        <div class="header_top">
+                            <div class="top_right">
+                                <ul>
+                                    <li><a href="contact.html">help</a></li>|
+                                    <li><a href="contact.html">Contact</a></li>|
+                                    <li><a href="checkout.html">Delivery information</a></li>
+                                </ul>
+                            </div>
+                            <div class="top_left">
+                                <ul>
+                                    <li class="nav item"><a style="color:white;">@Session["KullaniciAdi"].ToString()</a></li>
+                                    <li class="nav item">
+                                        <a style="color:white;" class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                                            <i class="fa fa-fw fa-sign-out"></i>Çıkış Yap
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <!-- /top_bg -->
+                    </div>
+                    <div class="header_bg">
+
+                        <div class="header">
+                            <div class="head-t">
+                                <div class="logo">
+                                    <a href="/Kullanici/Index/"><img src="/Content/images/Kurumsal.png" class="img-responsive" alt=""> </a>
+                                </div>
+                                <!-- start header_right -->
+                                
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //header-ends -->
+                    <!--content-->
+                    <div class="content">
+                        @RenderBody()
+                    </div>
+                    <!--content-->
+                </div>
+            </div>
+            <!--//content-inner-->
+            <!--/sidebar-menu-->
+            <div class="sidebar-menu">
+                <header class="logo1">
+                    <a class="sidebar-icon"> <span class="fa fa-bars"></span> </a>
+                </header>
+                <span style="color:white;font-size:16px;">Harmony ERP</span>
+                <div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
+                <div class="menu">
+                    <ul id="menu">
+                        @if (Session["Rol"].ToString() == "Kullanici" || Session["Rol"].ToString() == "Admin")
+                        {
+                            <li><a href="/Kullanici/Index"><i class="fa fa-tachometer"></i> <span>Verdiğim İşler</span></a></li>
+                            <li><a href="/Kullanici/YapacagimIs"><i class="lnr lnr-book"></i> <span>Yapacağım İşler</span></a></li>
+                            <li><a href="/Kullanici/BitmisIslerim"><i class="lnr lnr-envelope"></i> <span>Bitmiş İşlerim</span></a></li>
+                            <li></li>
+                            <li><a href="/Kullanici/IzlenenIsler"><i class="lnr lnr-chart-bars"></i> <span>İzlediğim İşler</span></a></li>
+                        }
+                        @if (Session["Rol"].ToString() == "Admin")
+                        {
+                            <li><a href="/Kullanici/MusteriIstekleri"><i class="lnr lnr-chart-bars"></i> <span>Müşteri İstekleri</span></a></li>
+                        }
+                        @if (Session["Rol"].ToString() == "Müşteri")
+                        {
+                            <li><a href="/Musteri/Index"><i class="fa fa-tachometer"></i> <span>İsteklerim</span></a></li>
+                        }
+
+                        @*<li>@Html.ActionLink("İzlediğim işler","IzlenenIsler",new { Durumu = 0 })</li>*@
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Çıkış Yap</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Çıkış yaptığınız taktirde oturum sonlanacaktır.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">İptal</button>
+                        <a class="btn btn-primary" href="/Kullanici/KullaniciCikis">Çıkış</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var toggle = true;
+
+            $(".sidebar-icon").click(function () {
+                if (toggle) {
+                    $(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+                    $("#menu span").css({ "position": "absolute" });
+                }
+                else {
+                    $(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+                    setTimeout(function () {
+                        $("#menu span").css({ "position": "relative" });
+                    }, 400);
+                }
+
+                toggle = !toggle;
+            });
+        </script>
+    </div>
+    <!--js -->
+    <script src="/Content/js/jquery.nicescroll.js"></script>
+    <script src="/Content/js/scripts.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/Content/js/bootstrap.min.js"></script>
+    <!-- /Bootstrap Core JavaScript -->
+    <!-- real-time -->
+    <script language="javascript" type="text/javascript" src="/Content/js/jquery.flot.js"></script>
+    <!-- /real-time -->
+    <script src="/Content/js/jquery.fn.gantt.js"></script>
+    <script src="/Content/js/menu_jquery.js"></script>
+    <script src="/Content/js/jquery.js"></script>
+    <script src="/Content/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="/Content/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="/Content/js/jquery.scrollTo.min.js"></script>
+    <script src="/Content/js/respond.min.js"></script>
+    <!--<script src="/Content/js/jquery.nicescroll.js" type="text/javascript"></script>-->
+    <!--common script for all pages-->
+    <script src="/Content/js/common-scripts.js"></script>
+    @*<script src="~/Content/js/bootstrap.bundle.min.js"></script>*@
+    @RenderSection("script", false)
+</body>
+</html>

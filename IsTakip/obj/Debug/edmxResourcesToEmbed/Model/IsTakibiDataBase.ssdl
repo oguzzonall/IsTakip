@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IsTakibiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CariKart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kod" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Tanim" Type="varchar" MaxLength="65" Nullable="false" />
+    <Property Name="GrupTanimi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sirket_Kod" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="GrupSirketi" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Yetkili1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Yetkili1Unvan" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Yetkili2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Yetkili2Unvan" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Yetkili3" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Yetkili3Unvan" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Yetkili4" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Yetkili4Unvan" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SevkAdres" Type="text" Nullable="false" />
+    <Property Name="Adres" Type="text" Nullable="false" />
+    <Property Name="Adres1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Adres2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Adres3" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="FatAdres1" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="FatAdres2" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="FatAdres3" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="il" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ilce" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ulke" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="BolgeKod" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Tel1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tel2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Faks" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Gsm" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="VergiDairesi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="VergiNo" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="VadeGun" Type="smallint" Nullable="false" />
+    <Property Name="KalitePuani" Type="smallint" Nullable="false" />
+    <Property Name="PerformansPuan" Type="float" Nullable="false" />
+    <Property Name="A_UKP" Type="float" Nullable="false" />
+    <Property Name="A1_MlzKalitePuani" Type="float" Nullable="false" />
+    <Property Name="A2_DuzFaaliyetPuani" Type="float" Nullable="false" />
+    <Property Name="B_TP" Type="float" Nullable="false" />
+    <Property Name="B1_TerminMiktarUyumu" Type="float" Nullable="false" />
+    <Property Name="B2_TerminZamanUyumu" Type="float" Nullable="false" />
+    <Property Name="B3_AmbalajUyumu" Type="float" Nullable="false" />
+    <Property Name="C_FG" Type="float" Nullable="false" />
+    <Property Name="D_KS" Type="float" Nullable="false" />
+    <Property Name="KaliteSistemiVar" Type="bit" Nullable="false" />
+    <Property Name="KalilteSistemPuani" Type="float" Nullable="false" />
+    <Property Name="TedSuresiPuani" Type="float" Nullable="false" />
+    <Property Name="BrFiyatPuani" Type="float" Nullable="false" />
+    <Property Name="Aciklama" Type="text" Nullable="false" />
+    <Property Name="OzelKod1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OzelKod2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OzelKod3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OzelKod4" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OzelKod5" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OzelKod6" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OzelKod7" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Aktif" Type="bit" Nullable="false" />
+    <Property Name="IstigalKonusu" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="AliciSatici" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="Onayli" Type="bit" Nullable="false" />
+    <Property Name="Isk1" Type="float" Nullable="false" />
+    <Property Name="Isk2" Type="float" Nullable="false" />
+    <Property Name="Isk3" Type="float" Nullable="false" />
+    <Property Name="FiyatKodu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Nakliye" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="Odeme" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="Teslim" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="VarisYeri" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="OdemeTarihi" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="TahsilatBilgisi" Type="text" Nullable="false" />
+    <Property Name="Kdv" Type="float" Nullable="false" />
+    <Property Name="KaraListe" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="KaraListeAciklama" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="TedDegHesapNo" Type="int" Nullable="false" />
+    <Property Name="TedSifre" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="IletisimPuani" Type="float" Nullable="false" />
+    <Property Name="KayitTarihi" Type="smalldatetime" />
+    <Property Name="KullaniciNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="DegTarihi" Type="smalldatetime" />
+    <Property Name="DegKullNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Yurticidisi" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="MRP_Peryodu" Type="smallint" Nullable="false" />
+    <Property Name="SaticiKod" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="SevkMinLimit" Type="float" Nullable="false" />
+    <Property Name="SevkEmriEmail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IrsaliyeEmail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="FaturaEmail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SatisIadeEmail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="YetkiliKullaniciNo" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="SatisOdemeUyariGunu" Type="tinyint" Nullable="false" />
+    <Property Name="Sevkil" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sevkilce" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="SevkUlke" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="FiyatKoduIleAlacakTakibi" Type="bit" Nullable="false" />
+    <Property Name="NeredenBuldu" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="WebUyeId" Type="int" Nullable="false" />
+    <Property Name="Sektor" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SektorAgirligi" Type="tinyint" Nullable="false" />
+    <Property Name="SektordeYaptigiIs" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PotansiyelCariKartId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipDetay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MasterId" Type="int" Nullable="false" />
+    <Property Name="Tarih" Type="smalldatetime" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="Durumu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sorumlu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Yonlendiren" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="KayitTarihi" Type="datetime" Nullable="false" />
+    <Property Name="MailDurumu" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="IadeAciklama" Type="varchar" MaxLength="800" Nullable="false" />
+    <Property Name="HarcananSure" Type="float" Nullable="false" />
+    <Property Name="IsiVerenYorumu" Type="varchar" MaxLength="800" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipGruplar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipIzleme">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Izleyen" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Izlenen" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Harmony_ERP.dbo.IsTakipJobProcess' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IsTakipJobProcess">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tarih" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="IsTakipKategori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tanim" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TerminGunuBelirle" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipMailler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tarih" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="IsTakipMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tarih" Type="smalldatetime" Nullable="false" />
+    <Property Name="IsiVeren" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Oncelik" Type="int" Nullable="false" />
+    <Property Name="Kategori" Type="int" Nullable="false" />
+    <Property Name="Kapandi" Type="bit" Nullable="false" />
+    <Property Name="Termin" Type="smalldatetime" />
+    <Property Name="KayitTarihi" Type="datetime" Nullable="false" />
+    <Property Name="TamamlanmaYuzdesi" Type="int" Nullable="false" />
+    <Property Name="Gun" Type="int" Nullable="false" />
+    <Property Name="MailDurumu" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="IsKodu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsGrubu" Type="int" Nullable="false" />
+    <Property Name="EkliBelge" Type="tinyint" Nullable="false" />
+    <Property Name="Arizaid" Type="int" Nullable="false" />
+    <Property Name="Okundu" Type="bit" Nullable="false" />
+    <Property Name="Gorusmeid" Type="int" Nullable="false" />
+    <Property Name="PeriyotMasterId" Type="int" Nullable="false" />
+    <Property Name="PeriyotDetayId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipOncelikler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tanim" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Gun" Type="int" Nullable="false" />
+    <Property Name="AmirMailGitmeSuresi1" Type="int" Nullable="false" />
+    <Property Name="AmirMailGitmeSuresi2" Type="int" Nullable="false" />
+    <Property Name="AmirMailGitmeSuresi3" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Harmony_ERP.dbo.IsTakipPeriyodikDetay' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IsTakipPeriyodikDetay">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Periyot" />
+      <PropertyRef Name="PeriyotTipi" />
+      <PropertyRef Name="PeriyotGunu" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Periyot" Type="int" Nullable="false" />
+    <Property Name="PeriyotTipi" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="PeriyotGunu" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipPeriyodikMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsiVeren" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Aciklama" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Oncelik" Type="int" Nullable="false" />
+    <Property Name="Kategori" Type="int" Nullable="false" />
+    <Property Name="KayitTarihi" Type="datetime" Nullable="false" />
+    <Property Name="Gun" Type="int" Nullable="false" />
+    <Property Name="IsKodu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsGrubu" Type="int" Nullable="false" />
+    <Property Name="PeriyotId1" Type="int" Nullable="false" />
+    <Property Name="PeriyotId2" Type="int" Nullable="false" />
+    <Property Name="PeriyotId3" Type="int" Nullable="false" />
+    <Property Name="PeriyotId4" Type="int" Nullable="false" />
+    <Property Name="PeriyotId5" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipPeriyodikSorumlular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MasterId" Type="int" Nullable="false" />
+    <Property Name="Sorumlu" Type="varchar" MaxLength="10" />
+    <Property Name="Durumu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Mail" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Harmony_ERP.dbo.IsTakipSabitler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="IsTakipSabitler">
+    <Key>
+      <PropertyRef Name="Host" />
+      <PropertyRef Name="Port" />
+      <PropertyRef Name="Sifre" />
+      <PropertyRef Name="mail" />
+      <PropertyRef Name="EnableSsl" />
+      <PropertyRef Name="AndroidVersiyonKodu" />
+      <PropertyRef Name="AndroidVersiyonAdi" />
+    </Key>
+    <Property Name="Host" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Port" Type="int" Nullable="false" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EnableSsl" Type="bit" Nullable="false" />
+    <Property Name="AndroidVersiyonKodu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="AndroidVersiyonAdi" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipSorumlular">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MasterId" Type="int" Nullable="false" />
+    <Property Name="Sorumlu" Type="varchar" MaxLength="10" />
+    <Property Name="Durumu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Mail" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipWebTalep">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WebKullNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="WebKullSifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sirket_Kod" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TanimPersonel">
+    <Key>
+      <PropertyRef Name="SicilNo" />
+      <PropertyRef Name="Sirket_Kod" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SicilNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sirket_Kod" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Isim" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IsimEDefter" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Gorevi" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="CalistigiBolum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsMerkeziKodu" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IslemYeriKodu" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SadeceBolumuneUretimGirisi" Type="bit" Nullable="false" />
+    <Property Name="Aktif" Type="bit" Nullable="false" />
+    <Property Name="Sifre" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="MusSipMesajAlacak" Type="bit" Nullable="false" />
+    <Property Name="MusSipMesajDurum1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="MusSipMesajDurum2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SevkEmriMesajAlacak" Type="bit" Nullable="false" />
+    <Property Name="SevkEmriMesajDurum1" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SevkEmriMesajDurum2" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FiyatDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="FiyatGoremesin" Type="bit" Nullable="false" />
+    <Property Name="FaturaHareketKodu" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="FaturaCariKod" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="KasaFisTipi" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="KasaKasaKodu" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="KasaHesTipi" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="KasaHesKodu" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="FaturaDepoKod" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="SatinalmaLimitiTL" Type="float" Nullable="false" />
+    <Property Name="TalepOnayYapabilir" Type="bit" Nullable="false" />
+    <Property Name="WebKullanicisi" Type="bit" Nullable="false" />
+    <Property Name="WebdenSiparisGirebilsin" Type="bit" Nullable="false" />
+    <Property Name="WebdenSiparisSilebilsin" Type="bit" Nullable="false" />
+    <Property Name="EPosta" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="TZYAdmin" Type="bit" Nullable="false" />
+    <Property Name="MUHAdmin" Type="bit" Nullable="false" />
+    <Property Name="ITSAdmin" Type="bit" Nullable="false" />
+    <Property Name="IKBAdmin1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IKBAdmin" Type="bit" Nullable="false" />
+    <Property Name="ITSSablonOlstrbilir" Type="bit" Nullable="false" />
+    <Property Name="TartiAdmin" Type="bit" Nullable="false" />
+    <Property Name="BankaTalimatAdmin" Type="bit" Nullable="false" />
+    <Property Name="RehberAdmin" Type="bit" Nullable="false" />
+    <Property Name="StokAdiniDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="StokMRP_BilgDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="StokKaliteDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="StokTedarikDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="StokMlzGrupDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="MusteriSiparisRezerviniDegistirebilsin" Type="bit" Nullable="false" />
+    <Property Name="TumFirmalariGorebilsin" Type="bit" Nullable="false" />
+    <Property Name="CariBakiyeGorebilsin" Type="bit" Nullable="false" />
+    <Property Name="DefaultSirket" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="StoktanRezervdeMusSipDegistirsin" Type="bit" Nullable="false" />
+    <Property Name="KullanilanModulIceriginiDegistirebilir" Type="bit" Nullable="false" />
+    <Property Name="UretimPlanlamaYetkisiVar" Type="bit" Nullable="false" />
+    <Property Name="MusteriSiparisiOnaylayabilir" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="KisaKodu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="AmirSicilNo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OtomatikSifreIleGiris" Type="bit" Nullable="false" />
+    <Property Name="WebdendeGirebilir" Type="bit" Nullable="false" />
+    <Property Name="WebdenEkstreAlabilsin" Type="bit" Nullable="false" />
+    <Property Name="DokumanBilgDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="SatisVeTeklifteFiyatDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="BarkodDizayniYapamasin" Type="bit" Nullable="false" />
+    <Property Name="ArizaAdmin" Type="bit" Nullable="false" />
+    <Property Name="TumDepolaraYetkili" Type="bit" Nullable="false" />
+    <Property Name="SevkEmirliSevkiyattaBarkodsuzSevkEdebilir" Type="bit" Nullable="false" />
+    <Property Name="SatinalmaTalepteStokIsminiDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="SatinalmaSipManuelKapatabilsin" Type="bit" Nullable="false" />
+    <Property Name="FaturadaSatinalmaFarkOnayi" Type="bit" Nullable="false" />
+    <Property Name="WebSatisHMM" Type="bit" Nullable="false" />
+    <Property Name="WebSatisYMM" Type="bit" Nullable="false" />
+    <Property Name="WebSatisMMM" Type="bit" Nullable="false" />
+    <Property Name="WebStokOzelKod4" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="MusteriSipOnaylayabilir" Type="bit" Nullable="false" />
+    <Property Name="StnlmSipKapatmaYuzdesi" Type="float" Nullable="false" />
+    <Property Name="SiparisMailAdresi" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="SiparisMailSifresi" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="KaliteSonucDegistirebilir" Type="bit" Nullable="false" />
+    <Property Name="TumFaturalaraYetkili" Type="bit" Nullable="false" />
+    <Property Name="GorusmeTakibindeTumBolumleriGorsun" Type="bit" Nullable="false" />
+    <Property Name="GorusmeTakipBilgisiSilebilsin" Type="bit" Nullable="false" />
+    <Property Name="KoliIciMiktarDisindaSiparisGirebilir" Type="bit" Nullable="false" />
+    <Property Name="ElTerminalindeStokKontrolYapamasin" Type="bit" Nullable="false" />
+    <Property Name="AdreslerdeEksiBakiyeKaydedebilir" Type="bit" Nullable="false" />
+    <Property Name="TeklifSiparisDegistir" Type="bit" Nullable="false" />
+    <Property Name="WebdeEkstre" Type="bit" Nullable="false" />
+    <Property Name="TeklifVeSiparisKarlilikOraniniGorebilsin" Type="bit" Nullable="false" />
+    <Property Name="BolgeKod" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="OturumSuresi" Type="int" Nullable="false" />
+    <Property Name="TeklifVeSiparisIskontoVeKdvDegistiremesin" Type="bit" Nullable="false" />
+    <Property Name="TeklifVeSiparisIskontoVeKdvGoremesin" Type="bit" Nullable="false" />
+    <Property Name="SatisVeTeklifteFiyatGoremesin" Type="bit" Nullable="false" />
+    <Property Name="SatisDepoKod" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="TumKisilerinIsleriniGorebilsin" Type="bit" Nullable="false" />
+  </EntityType>
+  <Function Name="VerdigimIsler" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sorumlu" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="IsTakibiModelStoreContainer">
+    <EntitySet Name="CariKart" EntityType="Self.CariKart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipDetay" EntityType="Self.IsTakipDetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipGruplar" EntityType="Self.IsTakipGruplar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipIzleme" EntityType="Self.IsTakipIzleme" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipKategori" EntityType="Self.IsTakipKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipMailler" EntityType="Self.IsTakipMailler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipMaster" EntityType="Self.IsTakipMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipOncelikler" EntityType="Self.IsTakipOncelikler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipPeriyodikMaster" EntityType="Self.IsTakipPeriyodikMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipPeriyodikSorumlular" EntityType="Self.IsTakipPeriyodikSorumlular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipSorumlular" EntityType="Self.IsTakipSorumlular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipWebTalep" EntityType="Self.IsTakipWebTalep" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TanimPersonel" EntityType="Self.TanimPersonel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipJobProcess" EntityType="Self.IsTakipJobProcess" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IsTakipJobProcess].[Id] AS [Id], 
+    [IsTakipJobProcess].[Tarih] AS [Tarih]
+    FROM [dbo].[IsTakipJobProcess] AS [IsTakipJobProcess]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IsTakipPeriyodikDetay" EntityType="Self.IsTakipPeriyodikDetay" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IsTakipPeriyodikDetay].[Id] AS [Id], 
+    [IsTakipPeriyodikDetay].[Periyot] AS [Periyot], 
+    [IsTakipPeriyodikDetay].[PeriyotTipi] AS [PeriyotTipi], 
+    [IsTakipPeriyodikDetay].[PeriyotGunu] AS [PeriyotGunu]
+    FROM [dbo].[IsTakipPeriyodikDetay] AS [IsTakipPeriyodikDetay]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="IsTakipSabitler" EntityType="Self.IsTakipSabitler" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [IsTakipSabitler].[Host] AS [Host], 
+    [IsTakipSabitler].[Port] AS [Port], 
+    [IsTakipSabitler].[Sifre] AS [Sifre], 
+    [IsTakipSabitler].[mail] AS [mail], 
+    [IsTakipSabitler].[EnableSsl] AS [EnableSsl], 
+    [IsTakipSabitler].[AndroidVersiyonKodu] AS [AndroidVersiyonKodu], 
+    [IsTakipSabitler].[AndroidVersiyonAdi] AS [AndroidVersiyonAdi]
+    FROM [dbo].[IsTakipSabitler] AS [IsTakipSabitler]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

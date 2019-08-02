@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IsTakipModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IsTakipDetay">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Masterid" Type="int" Nullable="false" />
+    <Property Name="Tarih" Type="smalldatetime" Nullable="false" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Durumid" Type="int" Nullable="false" />
+    <Property Name="Sorumlu" Type="int" Nullable="false" />
+    <Property Name="KayitTarihi" Type="datetime" Nullable="false" />
+    <Property Name="HarcananSure" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipDurumu">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DurumAdi" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipGruplar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GrupAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipIzleme">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Izleyen" Type="int" Nullable="false" />
+    <Property Name="Izlenen" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipKategori">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TerminGunuBelirle" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipMaster">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KayitTarih" Type="datetime" Nullable="false" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="OncelikId" Type="int" Nullable="false" />
+    <Property Name="IsiVerenId" Type="int" Nullable="false" />
+    <Property Name="Kapandi" Type="bit" Nullable="false" />
+    <Property Name="KategoriId" Type="int" Nullable="false" />
+    <Property Name="Termin" Type="smalldatetime" Nullable="false" />
+    <Property Name="TamamlanmaYuzdesi" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="IsGrubuId" Type="int" Nullable="false" />
+    <Property Name="IsKodu" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Sorumlular" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="IsTakipOncelik">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OncelikAdi" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Gun" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipRoller">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RolAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IsTakipSorumlular">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Masterid" Type="int" Nullable="false" />
+    <Property Name="Sorumlu" Type="int" Nullable="false" />
+    <Property Name="DurumuId" Type="int" Nullable="false" />
+    <Property Name="Mail" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanicilar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciNo" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="RolId" Type="int" />
+  </EntityType>
+  <EntityType Name="MusteriIstekler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriId" Type="int" Nullable="false" />
+    <Property Name="Istek" Type="nvarchar" MaxLength="4000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Musteriler">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SirketAdi" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SirketNo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SirketSifre" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_IsTakipDetay_IsTakipDurumu">
+    <End Role="IsTakipDurumu" Type="Self.IsTakipDurumu" Multiplicity="1" />
+    <End Role="IsTakipDetay" Type="Self.IsTakipDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IsTakipDurumu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IsTakipDetay">
+        <PropertyRef Name="Durumid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipDetay_IsTakipMaster">
+    <End Role="IsTakipMaster" Type="Self.IsTakipMaster" Multiplicity="1" />
+    <End Role="IsTakipDetay" Type="Self.IsTakipDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IsTakipMaster">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IsTakipDetay">
+        <PropertyRef Name="Masterid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipDetay_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+    <End Role="IsTakipDetay" Type="Self.IsTakipDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IsTakipDetay">
+        <PropertyRef Name="Sorumlu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipIzleme_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+    <End Role="IsTakipIzleme" Type="Self.IsTakipIzleme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IsTakipIzleme">
+        <PropertyRef Name="Izleyen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipIzleme_Kullanicilar1">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+    <End Role="IsTakipIzleme" Type="Self.IsTakipIzleme" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IsTakipIzleme">
+        <PropertyRef Name="Izlenen" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipMaster_IsTakipGruplar">
+    <End Role="IsTakipGruplar" Type="Self.IsTakipGruplar" Multiplicity="1" />
+    <End Role="IsTakipMaster" Type="Self.IsTakipMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IsTakipGruplar">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IsTakipMaster">
+        <PropertyRef Name="IsGrubuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipMaster_IsTakipKategori">
+    <End Role="IsTakipKategori" Type="Self.IsTakipKategori" Multiplicity="1" />
+    <End Role="IsTakipMaster" Type="Self.IsTakipMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IsTakipKategori">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IsTakipMaster">
+        <PropertyRef Name="KategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipMaster_IsTakipOncelik">
+    <End Role="IsTakipOncelik" Type="Self.IsTakipOncelik" Multiplicity="1" />
+    <End Role="IsTakipMaster" Type="Self.IsTakipMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IsTakipOncelik">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IsTakipMaster">
+        <PropertyRef Name="OncelikId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipMaster_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+    <End Role="IsTakipMaster" Type="Self.IsTakipMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IsTakipMaster">
+        <PropertyRef Name="IsiVerenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipSorumlular_IsTakipDurumu">
+    <End Role="IsTakipDurumu" Type="Self.IsTakipDurumu" Multiplicity="1" />
+    <End Role="IsTakipSorumlular" Type="Self.IsTakipSorumlular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IsTakipDurumu">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="IsTakipSorumlular">
+        <PropertyRef Name="DurumuId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IsTakipSorumlular_Kullanicilar">
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="1" />
+    <End Role="IsTakipSorumlular" Type="Self.IsTakipSorumlular" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanicilar">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="IsTakipSorumlular">
+        <PropertyRef Name="Sorumlu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanicilar_IsTakipRoller">
+    <End Role="IsTakipRoller" Type="Self.IsTakipRoller" Multiplicity="0..1" />
+    <End Role="Kullanicilar" Type="Self.Kullanicilar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IsTakipRoller">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Kullanicilar">
+        <PropertyRef Name="RolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MusteriIstekler_Musteriler">
+    <End Role="Musteriler" Type="Self.Musteriler" Multiplicity="1" />
+    <End Role="MusteriIstekler" Type="Self.MusteriIstekler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteriler">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="MusteriIstekler">
+        <PropertyRef Name="MusteriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SorumlulariGetir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Masterid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerdigimIsleriGetir" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sorumluid" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="IsTakipModelStoreContainer">
+    <EntitySet Name="IsTakipDetay" EntityType="Self.IsTakipDetay" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipDurumu" EntityType="Self.IsTakipDurumu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipGruplar" EntityType="Self.IsTakipGruplar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipIzleme" EntityType="Self.IsTakipIzleme" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipKategori" EntityType="Self.IsTakipKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipMaster" EntityType="Self.IsTakipMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipOncelik" EntityType="Self.IsTakipOncelik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipRoller" EntityType="Self.IsTakipRoller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="IsTakipSorumlular" EntityType="Self.IsTakipSorumlular" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MusteriIstekler" EntityType="Self.MusteriIstekler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteriler" EntityType="Self.Musteriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_IsTakipDetay_IsTakipDurumu" Association="Self.FK_IsTakipDetay_IsTakipDurumu">
+      <End Role="IsTakipDurumu" EntitySet="IsTakipDurumu" />
+      <End Role="IsTakipDetay" EntitySet="IsTakipDetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipDetay_IsTakipMaster" Association="Self.FK_IsTakipDetay_IsTakipMaster">
+      <End Role="IsTakipMaster" EntitySet="IsTakipMaster" />
+      <End Role="IsTakipDetay" EntitySet="IsTakipDetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipDetay_Kullanicilar" Association="Self.FK_IsTakipDetay_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="IsTakipDetay" EntitySet="IsTakipDetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipIzleme_Kullanicilar" Association="Self.FK_IsTakipIzleme_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="IsTakipIzleme" EntitySet="IsTakipIzleme" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipIzleme_Kullanicilar1" Association="Self.FK_IsTakipIzleme_Kullanicilar1">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="IsTakipIzleme" EntitySet="IsTakipIzleme" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipMaster_IsTakipGruplar" Association="Self.FK_IsTakipMaster_IsTakipGruplar">
+      <End Role="IsTakipGruplar" EntitySet="IsTakipGruplar" />
+      <End Role="IsTakipMaster" EntitySet="IsTakipMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipMaster_IsTakipKategori" Association="Self.FK_IsTakipMaster_IsTakipKategori">
+      <End Role="IsTakipKategori" EntitySet="IsTakipKategori" />
+      <End Role="IsTakipMaster" EntitySet="IsTakipMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipMaster_IsTakipOncelik" Association="Self.FK_IsTakipMaster_IsTakipOncelik">
+      <End Role="IsTakipOncelik" EntitySet="IsTakipOncelik" />
+      <End Role="IsTakipMaster" EntitySet="IsTakipMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipMaster_Kullanicilar" Association="Self.FK_IsTakipMaster_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="IsTakipMaster" EntitySet="IsTakipMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipSorumlular_IsTakipDurumu" Association="Self.FK_IsTakipSorumlular_IsTakipDurumu">
+      <End Role="IsTakipDurumu" EntitySet="IsTakipDurumu" />
+      <End Role="IsTakipSorumlular" EntitySet="IsTakipSorumlular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IsTakipSorumlular_Kullanicilar" Association="Self.FK_IsTakipSorumlular_Kullanicilar">
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+      <End Role="IsTakipSorumlular" EntitySet="IsTakipSorumlular" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanicilar_IsTakipRoller" Association="Self.FK_Kullanicilar_IsTakipRoller">
+      <End Role="IsTakipRoller" EntitySet="IsTakipRoller" />
+      <End Role="Kullanicilar" EntitySet="Kullanicilar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MusteriIstekler_Musteriler" Association="Self.FK_MusteriIstekler_Musteriler">
+      <End Role="Musteriler" EntitySet="Musteriler" />
+      <End Role="MusteriIstekler" EntitySet="MusteriIstekler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

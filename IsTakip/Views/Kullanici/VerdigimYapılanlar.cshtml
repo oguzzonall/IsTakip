@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "VerdigimYapılanlar";
+}
+
+@using IsTakip.Models;
+@model List<IsTakipDetay>
+
+
+<div class="col-lg-12">
+    <div class="panel">
+        <div class="panel-body" style="overflow-x:auto">
+            <div id="unseen">
+                <table width="100%" class="table table-bordered table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="numeric">Tarih</th>
+                            <th>Açıklama</th>
+                            <th class="numeric">Durumu</th>
+                            <th class="numeric">Sorumlu</th>
+                            <th>Harcanan Süre</th>
+                            <th>Kayıt Tarihi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (IsTakipDetay ITD in Model)
+                        {
+                            <tr>
+                                <td class="numeric">@ITD.Tarih</td>
+                                <td>@ITD.Aciklama</td>
+                                <td class="numeric">@ITD.IsTakipDurumu.DurumAdi</td>
+                                <td class="numeric">@ITD.Kullanicilar.KullaniciAdi</td>
+                                <td class="numeric">@ITD.HarcananSure</td>
+                                <td class="numeric">@ITD.KayitTarihi</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

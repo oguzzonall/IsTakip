@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "MusteriIstekleri";
+}
+
+@using IsTakip.Models;
+@model IEnumerable<MusteriIstekler>
+
+<div class="col-lg-12">
+    <div class="panel">
+        <div class="panel-body" style="overflow-x:auto">
+            <div id="unseen">
+                <table width="100%" class="table table-bordered table-striped table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="numeric">İstek No</th>
+                            <th class="numeric">İstek Tarihi</th>
+                            <th class="numeric">Şirket Adı</th>
+                            <th>İstek Tipi</th>
+                            <th>İstek</th>
+                            <th class="numeric">Görüldü</th>
+                            <th class="numeric">Detayı Gör</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (MusteriIstekler MI in Model)
+                        {
+                            <tr>
+                                <td class="numeric">@MI.id</td>
+                                <td class="numeric">@MI.IstekTarihi</td>
+                                <td class="numeric">@MI.Musteriler.SirketAdi</td>
+                                <td>@MI.IsTakipIstekTipi.TipAdi</td>
+                                <td>@MI.Istek</td>
+                                <td class="numeric"> <a style="margin-left:20px;">@Html.DisplayFor(modelItem => MI.Goruldu)</a></td>
+                                <td class="numeric"><a href="/Musteri/IstekDetay/@MI.id" class="btn btn-success" style="margin-top:5px;">Detay</a></td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
